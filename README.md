@@ -22,8 +22,86 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-# ALGORITHM QUESTIONS
+# ALGORITHM ANSWER
 [Access this link](https://gist.github.com/Wordyka/d1e025ff3f8616b0cbaa9c7a58d37314).
+
+```
+// Question No.1
+function reverseAlphabet(str) {
+    let letters = [];
+    let digits = '';
+
+    // Traverse through the string once, separating letters and digits
+    for (let char of str) {
+        if (isNaN(char)) { // If it's a letter, add to letters array
+            letters.push(char);
+        } else { // If it's a digit, append to digits
+            digits += char;
+        }
+    }
+
+    // Reverse the letters array and join the result with the digits
+    return letters.reverse().join('') + digits;
+}
+
+const result = reverseAlphabet("NEGIE1");
+console.log(result); // Output: "EIGEN1"
+
+// Question No. 2
+function longestWord(sentence) {
+    return sentence.split(' ').reduce((longest, current) => {
+        return current.length > longest.length ? current : longest;
+    }, '');
+}
+
+const sentence = "Saya sangat senang mengerjakan soal algoritma";
+const longest = longestWord(sentence);
+console.log(`${longest}: ${longest.length} characters`); // Output: "mengerjakan: 11 characters"
+
+
+// Question No. 3
+function countOccurrences(input, query) {
+    // Create a frequency map for the input array
+    const frequencyMap = {};
+    for (let word of input) {
+        frequencyMap[word] = (frequencyMap[word] || 0) + 1;
+    }
+
+    // For each query, return the corresponding count from the frequency map
+    return query.map(q => frequencyMap[q] || 0);
+}
+
+const INPUT = ['xc', 'dz', 'bbb', 'dz'];
+const QUERY = ['bbb', 'ac', 'dz'];
+const OUTPUT = countOccurrences(INPUT, QUERY);
+console.log(OUTPUT); // Output: [1, 0, 2]
+
+
+// Question No. 4
+function diagonalDifference(matrix) {
+    let primaryDiagonal = 0;
+    let secondaryDiagonal = 0;
+    const n = matrix.length;
+
+    // Traverse the matrix once, summing the diagonals
+    for (let i = 0; i < n; i++) {
+        primaryDiagonal += matrix[i][i];            // Primary diagonal: row i, column i
+        secondaryDiagonal += matrix[i][n - 1 - i];  // Secondary diagonal: row i, column n-1-i
+    }
+
+    // Return the absolute difference between the sums
+    return Math.abs(primaryDiagonal - secondaryDiagonal);
+}
+
+const matrix = [
+    [1, 2, 0],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+const difference = diagonalDifference(matrix);
+console.log(difference); // Output: 3
+
+```
 
 
 # Simple Library Server
