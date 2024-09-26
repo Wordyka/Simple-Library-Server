@@ -39,8 +39,9 @@ This library system provides basic features for managing members, books, borrowi
 - Members and books can be checked and managed through the system, including displaying stock and borrowed book counts.
 
 ## Entity-Relationship Diagram (ERD)
-[Access this link](https://dbdiagram.io/d/Simple-Library-Server-66f5398b3430cb846cb36378).
 ![Simple Library Server.png](https://github.com/Wordyka/Simple-Library-Server/blob/main/Simple%20Library%20Server.png)
+<br />
+[Access this link](https://dbdiagram.io/d/Simple-Library-Server-66f5398b3430cb846cb36378).
 
 ## Project Structure
 
@@ -117,17 +118,3 @@ npm run test:e2e
 npm run test:cov
 ```
 
-
-# SmartFarm - Rice Plant Disease Detection
-
-This project is a Java Android application that detects rice plant diseases and suggests solutions by scanning images using the GPT-4 API.
-
-## Depedencies
-
-```sh
-implementation("com.github.Drjacky:ImagePicker:2.3.20")
-implementation("com.squareup.retrofit2:retrofit:2.9.0")
-implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-implementation("com.github.bumptech.glide:glide:4.11.0")
-implementation("com.squareup.picasso:picasso:2.71828")
-```
