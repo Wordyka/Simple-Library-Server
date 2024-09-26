@@ -40,7 +40,7 @@ This library system provides basic features for managing members, books, borrowi
 
 ## Entity-Relationship Diagram (ERD)
 [Access this link](https://dbdiagram.io/d/Simple-Library-Server-66f5398b3430cb846cb36378).
-![](Simple Library Server.png)
+!([Simple Library Server.png](https://github.com/Wordyka/Simple-Library-Server/blob/main/Simple%20Library%20Server.png))
 
 ## Project Structure
 
